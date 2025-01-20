@@ -1,8 +1,8 @@
 #!/bin/bash
 
-ITERATIONS=500 					# number of time push swap will be tested
-NB_ARGS=100						# size of the stack
-PUSH_SWAP_PATH=../push_swap		# path of push_swap executable
+ITERATIONS=500							# number of time push swap will be tested
+NB_ARGS=100								# size of the stack
+PUSH_SWAP_PATH=./push_swap				# path of push_swap executable
 
 AVRG=0
 MAX=0
@@ -16,9 +16,9 @@ do
 	AVRG=$((AVRG + COUNT))
 	if [ $COUNT -gt $MAX ]; then
 		MAX=$COUNT
-		printf "push_swap score: \e[31m$COUNT (new max)\e[0m\n"
+		printf "push_swap score: \e[31m$COUNT\t(new max)\e[0m\n"
 	else
-		printf "push_swap score: \e[32m$COUNT [$i/$ITERATIONS]\e[0m\r"
+		printf "push_swap score: \e[32m$COUNT\t[$(echo "scale=2; ($i / $ITERATIONS) * 100" | bc)%%]\e[0m\r"
 	fi
 done
 
