@@ -2,7 +2,7 @@
 
 ITERATIONS=500							# number of time push swap will be tested
 NB_ARGS=100								# size of the stack
-PUSH_SWAP_PATH=./push_swap				# path of push_swap executable
+PUSH_SWAP_PATH=../push_swap				# path of push_swap executable
 
 AVRG=0
 MAX=0
