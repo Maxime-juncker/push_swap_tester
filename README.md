@@ -24,4 +24,4 @@ before running the tester, you may need to changes these variables in `benchmark
 cd push_swap_tester
 bash benchmark.sh
 ```
-![screenshot](screenshot.png)
+![tester](tester.png)
