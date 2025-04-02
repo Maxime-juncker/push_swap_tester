@@ -19,7 +19,7 @@ printf "=============================================\n\n" >> tester.log
 for i in $(seq 1 $ITERATIONS);
 do
 	TRY=$(python3 rand_numbers.py $NB_ARGS)
-	COUNT=$(ARG="$(echo $TRY)"; "$PUSH_SWAP_PATH" "$ARG" | wc -l)
+	COUNT=$(ARG="$(echo $TRY)"; "$PUSH_SWAP_PATH" $ARG | wc -l)
 	AVRG=$((AVRG + COUNT))
 	if [ $COUNT -gt $MAX ]; then
 		MAX=$COUNT
